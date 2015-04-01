@@ -1,0 +1,5 @@
+mydata = read.csv("contentanalysis.csv", row.names="article")
+fit = hclust(dist(mydata), method="ward.D2")
+pdf(file="dendrogram.pdf",width=40,height=15)
+plot(fit)
+dev.off()
